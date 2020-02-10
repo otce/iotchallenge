@@ -622,8 +622,12 @@ a:active {
 * 5. statics styles 
 ***************************/
 .statics-section {
-  margin-top: -60px;
+  margin-top: -87px;
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .statics-section .thm-container {
   max-width: 920px;
