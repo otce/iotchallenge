@@ -9,7 +9,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { TeamComponent } from './team/team.component';
 import { TestientalsComponent } from './testientals/testientals.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { ParticlesModule } from 'angular-particle';
+import { NgImageAsParticlesModule } from 'ng-image-as-particles/src/public-api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ParticlesModule,
+    NgImageAsParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

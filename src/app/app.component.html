@@ -84,11 +84,15 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active slide-1">
             <div class="carousel-caption">
+                <particles [style]="Style" [width]="width" [height]="height" [params]="Params">
+                </particles>
+
                 <div class="thm-container">
                     <div class="box valign-bottom">
+                        <lib-image-as-particles  [imageUrl]="selectedUrl" backgroundColor="transparent"  touchAction="none"  >
+                            </lib-image-as-particles>
                         <div class="content ">
-                            <h2 data-animation="animated fadeInUp"> ENISO IOT <br /> CHALLENGE</h2>
-
+                            
                             <!--a data-animation="animated fadeInDown" href="#" class="thm-button">Start now</a-->
                             <!--a data-animation="animated fadeInDown" href="#" class="thm-button borderd">View plan</a-->
                         </div>
@@ -99,12 +103,13 @@
 
     </div>
 
-</div>
 
+
+</div>
 <section class="statics-section">
     <div class="countdown">
 
-        <div class="bloc-time hours" >
+        <div class="bloc-time hours">
             <span class="count-title">Days</span>
 
             <div class="figure hours hours-1">

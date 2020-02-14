@@ -552,7 +552,7 @@ a:active {
 
 /* fixing slider height */
 #minimal-bootstrap-carousel.slider-home-one .carousel-inner .item {
-  min-height: 879px;
+  min-height: 700px;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -564,9 +564,9 @@ a:active {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c57e5', endColorstr='#636ded', GradientType=1 );
 }
 
-.slider-home-one .slide-1 .box {
+/* .slider-home-one .slide-1 .box {
   background: transparent url(../img/banner-1-1.png) 104% 61% no-repeat;
-}
+} */
 .slider-home-one .content {
   padding-bottom: 258px;
 }
