@@ -1,0 +1,71 @@
+<div class="banner"></div>
+<div class="colums">
+  <div class="item" style="position: relative ;   margin: 30px auto;      ">
+    <input id="fname" style="padding: 10px;border-radius: 7px;" type="text" name="fname" [(ngModel)]="teamName"
+      placeholder="Team Name" required />
+  </div>
+</div>
+
+
+
+<h2>Team Leader :</h2>
+<div class="colums">
+  <div class="item">
+    <label for="fname"> First Name<span>*</span></label>
+    <input id="fname" type="text" name="fname" [(ngModel)]="teamLeader.firstname" required />
+  </div>
+  <div class="item">
+    <label for="lname"> Last Name<span>*</span></label>
+    <input id="lname" type="text" name="lname" [(ngModel)]="teamLeader.lastname" required />
+  </div>
+  <div class="item">
+    <label for="address1">mail<span>*</span></label>
+    <input id="address1" type="text" name="address1" [(ngModel)]="teamLeader.mail" required />
+  </div>
+  <div class="item">
+    <label for="address2">phone<span>*</span></label>
+    <input id="address2" type="text" name="address2" [(ngModel)]="teamLeader.phone" required />
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Basic outline input</mat-label>
+    <ngx-mat-file-input [(ngModel)]="teamLeader.cv" placeholder="Basic outline placeholder"></ngx-mat-file-input>
+    <mat-icon matSuffix>folder</mat-icon>
+  </mat-form-field>
+</div>
+<h2>Team Members :</h2>
+<mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="3" style="margin-left: 10px;" (change)="setMembers(3)"> 4 Members</mat-radio-button>
+  <mat-radio-button value="4" style="margin-left: 10px;" (change)="setMembers(4)">5 Members</mat-radio-button>
+  <mat-radio-button value="5" style="margin-left: 10px;" (change)="setMembers(5)">6 Members</mat-radio-button>
+</mat-radio-group>
+<div class="colums" *ngFor=" let member of teamMember ">
+  <div class="item">
+    <label for="fname"> First Name<span>*</span></label>
+    <input id="fname" type="text" name="fname" [(ngModel)]="member.firstname" required />
+  </div>
+  <div class="item">
+    <label for="lname"> Last Name<span>*</span></label>
+    <input id="lname" type="text" name="lname" [(ngModel)]="member.lastname" required />
+  </div>
+  <div class="item">
+    <label for="address1">mail<span>*</span></label>
+    <input id="address1" type="text" name="address1" [(ngModel)]="member.mail" required />
+  </div>
+  <div class="item">
+    <label for="address2">phone<span>*</span></label>
+    <input id="address2" type="text" name="address2" [(ngModel)]="member.phone" required />
+  </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Basic outline input</mat-label>
+    <ngx-mat-file-input [(ngModel)]="member.cv" placeholder="Basic outline placeholder"></ngx-mat-file-input>
+    <mat-icon matSuffix>folder</mat-icon>
+  </mat-form-field>
+</div>
+<h2>Terms and Conditions</h2>
+  <input type="checkbox" name="checkbox1">
+  <label>You consent to receive communications from us electronically. We will communicate with you by e-mail or
+    phone. You agree that all agreements, notices, disclosures and other communications that we provide to you
+    electronically satisfy any legal requirement that such communications be in writing.</label>
+  <div class="btn-block" style="margin-bottom: 50px;">
+    <button type="submit" (click)="addTeam()">Submit</button>
+  </div>

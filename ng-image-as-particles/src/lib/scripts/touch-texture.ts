@@ -12,7 +12,7 @@ export class TouchTexture {
   public texture: THREE.Texture;
 
   constructor() {
-    this.size = 64;
+    this.size = 1000;
     this.maxAge = 120;
     this.radius = 0.15;
     this.trail = new Array<Trail>();

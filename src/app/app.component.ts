@@ -1,10 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthConstants } from "../services/CommonServices/config/auth-constants";
+import { LStorageService} from "../services/CommonServices/localStorage/lstorage.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  constructor(private localstorage : LStorageService) {}
   title = 'eiotc';
   selectedUrl: string='assets/img/iotchallenge.png';
   intervalId = 0;
@@ -34,10 +37,11 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    this.localstorage.getToken();
     this.start();
     this.particle()
   }
-
+  
   start() { this.countDown(); }
 
   private countDown() {
@@ -195,5 +199,4 @@ export class AppComponent implements OnInit {
     }
 
   }
-
 }

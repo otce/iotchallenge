@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/font-awesome.min.css",
               "src/assets/css/bootstrap-select.min.css",
@@ -39,7 +40,6 @@
               "src/assets/plugins/icofont/css/icofont.css"
             ],
             "scripts": [
-                
               "src/assets/js/jquery.js",
               "src/assets/js/bootstrap.min.js",
               "src/assets/js/bootstrap-select.min.js",
@@ -148,6 +148,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "eiotc"
 }
